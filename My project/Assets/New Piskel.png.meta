@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 83904bdb0763b6d4c8b92f0928e5cb44
+guid: cf3bbdda401934c4abf4fc5e27044594
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -149,10 +149,10 @@ TextureImporter:
       name: New Piskel_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 3
-        width: 26
-        height: 26
+        x: 11
+        y: 14
+        width: 9
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,8 +176,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      New Piskel_0: -2510476293373519475
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
