@@ -7,10 +7,13 @@ public class PlayerHealth : MonoBehaviour
     public int health;
     public int maxHealth = 15;
 
+    public HealthBar healthBar;
+
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     public void TakeDamadge(int amount)
@@ -20,7 +23,9 @@ public class PlayerHealth : MonoBehaviour
         {
            Destroy(gameObject);
         }
-        
+
+        healthBar.SetHealth(health);
+
     }
 
    
