@@ -181,8 +181,8 @@ MonoBehaviour:
   moveSpeed: 5
   rb: {fileID: 447594950}
   dashSpeed: 12
-  dashDuration: 1
-  dashCooldown: 2
+  dashDuration: 0.3
+  dashCooldown: 4.6
 --- !u!212 &447594952
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -247,8 +247,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1782597321}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1782597320
@@ -282,7 +281,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 447594953}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!81 &1782597322
 AudioListener:
@@ -347,4 +346,5 @@ Camera:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1782597321}
   - {fileID: 447594953}
