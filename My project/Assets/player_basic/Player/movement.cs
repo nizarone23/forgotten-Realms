@@ -20,7 +20,7 @@ public class Movement : MonoBehaviour
 
     bool isDashing = false;
 
-    
+    //this is a comment for player movement
 
 
     void Update()
