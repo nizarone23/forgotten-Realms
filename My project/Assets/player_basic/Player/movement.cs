@@ -2,59 +2,72 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Movement : MonoBehaviour
 {
 
     public float moveSpeed;
     public Rigidbody2D rb;
     private Vector2 moveDirection;
 
+    bool canDash=true;
     public float dashSpeed;
+
     public float dashDuration;
+    float dashTimePast = 0;
+
+    float timePassed = 0;
     public float dashCooldown;
+
     bool isDashing = false;
 
-    void  Update()
-    {
-        ProcessInputs();
-    }
+    
 
-    private void FixedUpdate()
-    {
-        Move();
-    }
 
-    private void ProcessInputs()
+    void Update()
     {
+
+        //Count up with dashTimePast variable
+        
+        //If dashTimePast is greater than dashDuration, end the dash
+        
+
+
+        //Time.deltaTime is the time between frames
+
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
+        moveDirection = new Vector2(moveX, moveY).normalized;
+
+
+        if (!isDashing)
+        {            
+            rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+        }     
 
         if (isDashing)
         {
-            return;
+            canDash = false;
+            rb.velocity = new Vector2(moveDirection.x * dashSpeed, moveDirection.y * dashSpeed);
+            dashTimePast += Time.deltaTime;
+            if (dashTimePast > dashDuration)
+            {
+                isDashing = false;
+            }
         }
-        float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
-
-        moveDirection = new Vector2(moveX, moveY).normalized;
-        if (Input.GetKeyDown(KeyCode.LeftShift) )
+        else if (!canDash) 
         {
-            StartCoroutine(Dash());
+            dashTimePast += Time.deltaTime;
+            if (dashTimePast > dashCooldown)
+            {
+                dashTimePast = 0;
+                canDash = true;
+            }
         }
-    }
-
-    void Move() 
-    {
-        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
-    }
-    private void OnAnimatorMove()
-    {
         
-    }
-
-    private IEnumerator Dash ()
-    {
-        isDashing = true;
-        rb.velocity = new Vector2(moveDirection.x * dashSpeed, moveDirection.y * dashSpeed);
-        yield return new WaitForSeconds(dashDuration);
-        isDashing = false;
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && canDash)
+        {
+            isDashing = true;
+            
+        }
     }
 }
