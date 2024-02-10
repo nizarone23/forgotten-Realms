@@ -8,10 +8,13 @@ public class AIChase : MonoBehaviour
     public float speed;
 
     private float distance;
+
+    Rigidbody2D rb;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -20,8 +23,10 @@ public class AIChase : MonoBehaviour
         distance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
 
-        transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+        //transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
        
+        rb.velocity = direction * speed;
+
 
     }
 }
