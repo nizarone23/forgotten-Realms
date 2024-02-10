@@ -15,12 +15,12 @@ public class AIChase : MonoBehaviour
     public Rigidbody2D rb;
     private float distance;
 
-    Rigidbody2D rb;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        
     }
     void enemydashAttack () 
     {
