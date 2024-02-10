@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4b0c31bf8cde8244ab54805942a5897b
+guid: 02f9de1992b92604883a9a5c2e7f0a5c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7191086600566730548
-    second: chest close_0
+      213: -4035347112000683570
+    second: sword template_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -146,13 +146,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chest close_0
+      name: sword template_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 20
-        width: 90
-        height: 53
+        x: 22
+        y: 27
+        width: 39
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 43fe9d7c92fdbc360800000000000000
-      internalID: 7191086600566730548
+      spriteID: ec10dcb8e219ff7c0800000000000000
+      internalID: -4035347112000683570
       vertices: []
       indices: 
       edges: []
@@ -176,7 +176,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sword template_0: -4035347112000683570
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
