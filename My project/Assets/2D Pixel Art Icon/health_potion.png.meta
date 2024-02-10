@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1d34252feae54c7409aa81b8c0b94ceb
+guid: 145469f83f7dc0649a399c7a9b785d38
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5007883820521669024
-    second: chest open_0
+      213: 3861579366159045020
+    second: health_potion_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -146,13 +146,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chest open_0
+      name: health_potion_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 20
-        width: 90
-        height: 60
+        x: 295
+        y: 258
+        width: 483
+        height: 779
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a1ce964dc39f7540800000000000000
-      internalID: 5007883820521669024
+      spriteID: c9153e759f5179530800000000000000
+      internalID: 3861579366159045020
       vertices: []
       indices: 
       edges: []
@@ -176,8 +176,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      chest open_0: 5007883820521669024
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
