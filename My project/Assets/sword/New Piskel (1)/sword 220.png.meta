@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 1f7e8cd7b8bb7d943a3101cb51cbba7b
+guid: 3524ead029eeb614fa8b37a79af95caf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5867331941366042073
-    second: New Piskel-1.png (3)_0
+      213: 317476854230990626
+    second: sword 220_0
+  - first:
+      213: 8264888610607743451
+    second: sword 220_1
+  - first:
+      213: 1387768183709582865
+    second: sword 220_2
+  - first:
+      213: 812366011653870033
+    second: sword 220_3
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -146,13 +155,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: New Piskel-1.png (3)_0
+      name: sword 220_0
       rect:
         serializedVersion: 2
-        x: 50
-        y: 11
-        width: 92
-        height: 173
+        x: 26
+        y: 38
+        width: 14
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,8 +169,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 722f29f8fac039ea0800000000000000
-      internalID: -5867331941366042073
+      spriteID: 22fb8d05487e76400800000000000000
+      internalID: 317476854230990626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword 220_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 45
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd1427fe668c2b270800000000000000
+      internalID: 8264888610607743451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword 220_2
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 54
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11649947fc7524310800000000000000
+      internalID: 1387768183709582865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword 220_3
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 4
+        width: 50
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d1da30659a164b00800000000000000
+      internalID: 812366011653870033
       vertices: []
       indices: 
       edges: []
@@ -176,8 +248,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      New Piskel-1.png (3)_0: -5867331941366042073
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
