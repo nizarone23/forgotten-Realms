@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject item;
+    private Transform player;
+    private Transform Player;
+
+    private void Start()
     {
-        
+        player = Player.GetComponent<Transform>().transform;
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SpawnDroppedItem()
     {
-        
+        Vector2 playerPos = new Vector2(player.position.x, player.position.y+3);
+        Instantiate(item, playerPos, Quaternion.identity);
     }
+ 
 }
