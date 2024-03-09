@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
 
 public class PlayerHealth : MonoBehaviour
 {
+
+
     public int currenthealth;
     public int maxHealth = 15;
-
-
     public Image fillImage;
+    private bool heal = true;
+    public GameObject[] slots;
 
 
     //public float RemainingHealthPercentage
@@ -28,21 +31,49 @@ public class PlayerHealth : MonoBehaviour
         currenthealth = maxHealth;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R) &&  !(currenthealth == maxHealth))
+        {
+            //heal = true;
+
+            foreach (GameObject slot in slots)
+            {
+                if (slot && slot.transform.childCount > 0 && heal)
+                {
+                    GameObject potion = slot.transform.GetChild(0).gameObject;
+                    if (potion.tag == "inventory_potion")
+                    {
+                        //GameObject item = GameObject.FindWithTag("inventory_potion");
+                        TakeDamadge(-10);   
+                        Destroy(potion);
+                        //heal = false;
+                        break;
+                    }
+                }
+            }
+        }
+    }
     public void TakeDamadge(int amount)
     {
         currenthealth -= amount;
 
-
-        fillImage.fillAmount = (float)currenthealth / maxHealth;
+        if (currenthealth>= maxHealth)
+        {
+            currenthealth = maxHealth;
+        }
+        
 
         if (currenthealth <=0)
         {
            Destroy(gameObject);
         }
         
+        fillImage.fillAmount = (float)currenthealth / maxHealth;
     }
 
-   
+ 
 
-   
+
+
 }

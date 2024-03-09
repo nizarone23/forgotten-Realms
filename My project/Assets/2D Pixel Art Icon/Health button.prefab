@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 897155667230628914}
   - component: {fileID: 8386658635831211899}
   - component: {fileID: 6879654991313437970}
-  - component: {fileID: -7606383450320909403}
+  - component: {fileID: 5241202290563079534}
   m_Layer: 5
   m_Name: Health button
-  m_TagString: Untagged
+  m_TagString: Undefined
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &897155667230628914
 CanvasRenderer:
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &-7606383450320909403
+--- !u!114 &5241202290563079534
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,4 +133,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70952ab0f5ada5b4286731386e3765c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 9157889297286857390, guid: 0443f70bb10cdb34389a45541c389b09, type: 3}

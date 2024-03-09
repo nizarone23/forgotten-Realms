@@ -1,37 +1,36 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using UnityEngine;
 
 public class Slot : MonoBehaviour
 {
-
-    public GameObject player;
-    private Inventory inventory;
+    public GameObject parentObj;
+    public Inventory inventory;
     public int i;
 
     private void Start()
     {
-        inventory = (player).GetComponent<Inventory>();
+        
     }
 
     private void Update()
     {
-        if (transform.childCount <= 0)
+        if(transform.childCount <= 0)
         {
             inventory.isFull[i] = false;
-
         }
     }
 
-
-    public void DropItem()
+    public void Drop()
     {
-        foreach (Transform child in transform)
+        
+        foreach (Transform child in parentObj.transform)
         {
             child.GetComponent<Spawn>().SpawnDroppedItem();
-            GameObject.Destroy(child.gameObject);
-            
-
+            Destroy(child.gameObject);
         }
     }
+
+
 }
