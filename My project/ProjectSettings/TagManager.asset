@@ -8,6 +8,7 @@ TagManager:
   - health_potion
   - Slots
   - inventory_potion
+  - sword
   layers:
   - Default
   - TransparentFX
