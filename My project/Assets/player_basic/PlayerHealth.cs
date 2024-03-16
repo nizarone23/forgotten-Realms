@@ -66,13 +66,18 @@ public class PlayerHealth : MonoBehaviour
 
         if (currenthealth <=0)
         {
-           Destroy(gameObject);
+            FindObjectOfType<LevelManager>().Restart();
         }
         
         fillImage.fillAmount = (float)currenthealth / maxHealth;
+
     }
 
- 
+    public void MaxHealth()
+    {
+        currenthealth = maxHealth;
+    }
+    
 
 
 
