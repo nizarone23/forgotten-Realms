@@ -7,6 +7,8 @@ public class Movement : MonoBehaviour
 
     public float moveSpeed;
     public Rigidbody2D rb;
+    public Animator animator;
+    public SpriteRenderer spriteRenderer;
     private Vector2 moveDirection;
 
     bool canDash=true;
@@ -37,6 +39,19 @@ public class Movement : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
         moveDirection = new Vector2(moveX, moveY).normalized;
+
+        animator.SetFloat("MoveX", moveX);
+        animator.SetFloat("MoveY", moveY);
+
+        if (moveX < 0)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else
+        {
+            spriteRenderer.flipX = true;
+        }
+
 
 
         if (!isDashing)
