@@ -10,8 +10,9 @@ public class Movement : MonoBehaviour
     public Animator animator;
     public SpriteRenderer spriteRenderer;
     private Vector2 moveDirection;
+    public Vector2 lastForward;
 
-    bool canDash=true;
+    bool canDash = true;
     public float dashSpeed;
 
     public float dashDuration;
@@ -29,9 +30,9 @@ public class Movement : MonoBehaviour
     {
 
         //Count up with dashTimePast variable
-        
+
         //If dashTimePast is greater than dashDuration, end the dash
-        
+
 
 
         //Time.deltaTime is the time between frames
@@ -39,6 +40,7 @@ public class Movement : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
         moveDirection = new Vector2(moveX, moveY).normalized;
+
 
         animator.SetFloat("MoveX", moveX);
         animator.SetFloat("MoveY", moveY);
@@ -50,14 +52,21 @@ public class Movement : MonoBehaviour
         else
         {
             spriteRenderer.flipX = true;
+
+            
+        }
+        if (moveDirection.sqrMagnitude >= 1)
+        {
+            lastForward = moveDirection;
+
         }
 
 
 
         if (!isDashing)
-        {            
+        {
             rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
-        }     
+        }
 
         if (isDashing)
         {
@@ -69,7 +78,7 @@ public class Movement : MonoBehaviour
                 isDashing = false;
             }
         }
-        else if (!canDash) 
+        else if (!canDash)
         {
             dashTimePast += Time.deltaTime;
             if (dashTimePast > dashCooldown)
@@ -78,11 +87,11 @@ public class Movement : MonoBehaviour
                 canDash = true;
             }
         }
-        
+
         if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && canDash)
         {
             isDashing = true;
-            
+
         }
     }
 }

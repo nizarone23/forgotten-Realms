@@ -474,6 +474,7 @@ GameObject:
   - component: {fileID: 447594950}
   - component: {fileID: 447594955}
   - component: {fileID: 447594956}
+  - component: {fileID: 447594957}
   m_Layer: 0
   m_Name: player_character
   m_TagString: Player
@@ -522,6 +523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rb: {fileID: 447594950}
+  lastForward: {x: 0, y: 0}
   dashSpeed: 12
   dashDuration: 0.3
   dashCooldown: 4.6
@@ -679,6 +681,21 @@ MonoBehaviour:
   - {fileID: 1896786247}
   - {fileID: 491861681}
   - {fileID: 508818191}
+--- !u!114 &447594957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447594949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44e935a10fd0e146bb112ee5c1d28eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sword: {fileID: 2235010640393790404, guid: 9458042cf648da143a623a9347fbac31, type: 3}
+  spawnDistance: 1
+  attackMoveSpeed: 5
 --- !u!1 &491861681
 GameObject:
   m_ObjectHideFlags: 0
@@ -4156,6 +4173,7 @@ GameObject:
   - component: {fileID: 1441595626}
   - component: {fileID: 1441595627}
   - component: {fileID: 1441595628}
+  - component: {fileID: 1441595629}
   m_Layer: 0
   m_Name: one_enemy
   m_TagString: Untagged
@@ -4326,6 +4344,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1441595629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441595621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2af05d3042061eb4e9e0fea1798a2f07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxEnemyHealth: 15
+  currentEnemyHealth: 0
 --- !u!1 &1448544363
 GameObject:
   m_ObjectHideFlags: 0
