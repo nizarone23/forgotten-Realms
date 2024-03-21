@@ -9,14 +9,16 @@ TagManager:
   - Slots
   - inventory_potion
   - sword
+  - teleporter
+  - EnemyHitbox
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
+  - EnemyHitbox
   - 
   - 
   - 

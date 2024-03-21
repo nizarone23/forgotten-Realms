@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class enemy_health : MonoBehaviour
 {
+    
     public int maxEnemyHealth;
     public int currentEnemyHealth;
+
+    Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         currentEnemyHealth = maxEnemyHealth;
     }
 
+    public bool _hasTarget = false;
+
+
+    
     // Update is called once per frame
     void Update()
     {
@@ -19,7 +26,11 @@ public class enemy_health : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
+        
     }
+
+
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
