@@ -11,6 +11,7 @@ TagManager:
   - sword
   - teleporter
   - EnemyHitbox
+  - Win
   layers:
   - Default
   - TransparentFX

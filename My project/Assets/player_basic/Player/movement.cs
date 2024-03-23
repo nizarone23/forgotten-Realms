@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-
+ 
     public float moveSpeed;
     public Rigidbody2D rb;
     public Animator animator;
@@ -94,4 +94,5 @@ public class Movement : MonoBehaviour
 
         }
     }
+   
 }
