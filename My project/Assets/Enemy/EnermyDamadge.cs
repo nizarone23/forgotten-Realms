@@ -11,7 +11,7 @@ public class EnermyDamadge : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerHealth = FindAnyObjectByType<PlayerHealth>();
     }
 
     // Update is called once per frame
@@ -21,6 +21,14 @@ public class EnermyDamadge : MonoBehaviour
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            playerHealth.TakeDamadge(damadge);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
