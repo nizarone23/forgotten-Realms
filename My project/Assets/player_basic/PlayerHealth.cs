@@ -62,7 +62,8 @@ public class PlayerHealth : MonoBehaviour
         {
             currenthealth = maxHealth;
         }
-        
+
+        Debug.Log("amount: " + amount + ", currenthealth: " + currenthealth);
 
         if (currenthealth <=0)
         {
